@@ -1,5 +1,8 @@
 from rich import print
+import rich.traceback
 import re
+
+rich.traceback.install()
 
 # input data
 passwords = [i for i in open("Day 2\input.txt", "r")]
