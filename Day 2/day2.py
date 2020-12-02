@@ -20,5 +20,11 @@ for x in passwords:
     if pw.count(char) >= mini and pw.count(char) <= maxi:
         valid1 += 1
 
+    # PART 2
+    if pw[mini-1] == char and not pw[maxi-1] == char \
+        or not pw[mini-1] == char and pw[maxi-1] == char:
+        valid2 += 1
+
 # return answer
 print(f"Part 1 Answer: [green]{valid1}")
+print(f"Part 2 Answer: [green]{valid2}")
